@@ -1,0 +1,37 @@
+<section>
+
+  <form action="/signup/" method="POST">
+    <div>
+      <label for="name"></label>
+      <input type="text" name="name" id="name">
+      @if (flashMessages.has('errors.name'))
+        <small>{{ flashMessages.get('errors.name') }}</small>
+      @endif
+    </div>
+    <div>
+      <label for="email"></label>
+      <input type="email" name="email" id="email">
+       @if (flashMessages.has('errors.email'))
+        <small>{{ flashMessages.get('errors.email') }}</small>
+      @endif
+    </div>
+    <div>
+      <label for="password"></label>
+      <input type="password" name="password" id="password">
+       @if (flashMessages.has('errors.password'))
+        <small>{{ flashMessages.get('errors.password') }}</small>
+      @endif
+    </div>
+    <div>
+      <label for="password_confirmation"></label>
+      <input type="password" name="password_confirmation" id="password_confirmation">
+      @if (flashMessages.has('errors.password_confirmation'))
+        <small>{{ flashMessages.get('errors.password_confirmation') }}</small>
+      @endif
+    </div>
+    <div>
+      <button type="submit">Sig Up</button>
+    </div>
+  </form>
+
+</section>
